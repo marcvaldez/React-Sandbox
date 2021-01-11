@@ -4,9 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { ChakraProvider } from "@chakra-ui/react"
+import { BrowserRouter } from 'react-router-dom';
+
+import { extendTheme } from "@chakra-ui/react"
+
+const colors = {
+  bioblue: "#136ab4",
+  biogreen: "#4f9944"
+}
+const theme = extendTheme({ colors })
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider theme={theme}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
