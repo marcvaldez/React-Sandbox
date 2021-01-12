@@ -9,7 +9,7 @@ import {
   import { getCurrentToken } from './utils/auth';
   */
   function getGraphQLURL() {
-    return 'http://192.168.2.36:5000/graphql'
+    return 'https://backend.barbe.cyou/graphql'
   }
   
   async function fetchQuery(
